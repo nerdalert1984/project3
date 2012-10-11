@@ -63,3 +63,19 @@ var pleaVillagers = pleadingVillagers(0)
 
 
 console.log("There are so many villagers pleading for help.")
+
+// For Loop Inside of a Function
+var showdown = function (monsterName, weaponName) {
+for (m = monsterName; m < 4; m++) {
+	heroFight = hero.name + "has fought and slain " + monsters[m];
+		for (w = weaponName; w < 4; w++) {
+			heroKill = " with his " + hero.weapons[w] + ".";
+		};
+	console.log(heroFight + heroKill);
+};
+	return heroFight;
+	return heroKill;
+};
+
+var whatShowdown = showdown(0,0)
+
