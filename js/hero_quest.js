@@ -25,7 +25,10 @@ var monsters = [" Hunpar the Goblin ",
 				 " Wretchmaw the Troll King ", 
 				 " Arch-Lich Volsonis ",
 				 " Firereek the Red Dragon "
-	];
+	],
+	heroPresent = true,
+	haveWeapons = true,
+	numOfMonsters = 4;
 
 //Procedure (Function with no return value)
 var startTale = function (villageName) {
@@ -34,5 +37,29 @@ var startTale = function (villageName) {
 
 startTale("Dunhollow");
 
+// Boolean Function with return.
+var findHero = function (heroName) {
+	if (heroPresent && haveWeapons) {
+	heroStatus = " is ready!";
+} else { heroStatus = " is not ready.";}
+  heroFound = "Our hero, " + heroName + heroStatus;
+  return heroFound;
+};
+var haveHero = findHero("Hunter the Slayer of Evil");
+console.log(haveHero);
+
+// Number Function + While Loop with return (Counts up number of villagers pleading)
+var pleadingVillagers = function (numOfVillagers) {
+while (numOfVillagers <= 4) {
+	enoughVillagers = "There are " + numOfVillagers + " villagers pleading for help.";
+	console.log(enoughVillagers);
+	numOfVillagers++;
+
+};
+	return enoughVillagers;
+};
+
+var pleaVillagers = pleadingVillagers(0)
 
 
+console.log("There are so many villagers pleading for help.")
