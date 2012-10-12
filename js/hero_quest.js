@@ -14,7 +14,7 @@ var hero = {
 			  "Bastard Blade of Dimensional Sundering" 
 	], 
 	age: 5,
-	heroClass: "Adventurer",
+	heroClass: "Paladin",
 	homeBase: "The Valley of Spielburg",
 	askQuest: function () {
 		console.log("So you want to be a hero?");
@@ -67,7 +67,7 @@ console.log("There are so many villagers pleading for help.")
 // For Loop Inside of a Function
 var showdown = function (monsterName, weaponName) {
 for (m = monsterName; m < 4; m++) {
-	heroFight = hero.name + "has fought and slain " + monsters[m];
+	heroFight = hero.name + " has fought and slain " + monsters[m];
 		for (w = weaponName; w < 4; w++) {
 			heroKill = " with his " + hero.weapons[w] + ".";
 		};
@@ -78,4 +78,24 @@ for (m = monsterName; m < 4; m++) {
 };
 
 var whatShowdown = showdown(0,0)
+
+//Procedure (Function with no return value)
+var endTale = function (villageName) {
+	console.log(hero.name + "has saved the village of " + villageName + "!" + " Our hero sheathes his weapons and begins his journey to the next town and meet up with his allies:");
+	
+};
+
+//Procedure (Function with no return value)
+endTale("Dunhollow");
+
+
+
+var handleData = function (json) {
+	for (var a = 0; a < json.allies.length; a++){
+		var ally = json.allies[a];
+		console.log(ally.name + " the " + ally.className + ".");
+	};	
+};
+
+handleData(json2);
 
