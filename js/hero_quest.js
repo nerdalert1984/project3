@@ -30,14 +30,14 @@ var monsters = [" Hunpar the Goblin ",
 	haveWeapons = true,
 	numOfMonsters = 4;
 
-//Procedure (Function with no return value)
+//Procedure (Function with no return value) and Accessor
 var startTale = function (villageName) {
 	console.log("The tale begins with " + hero.name + " arriving in the small village of " + villageName + ".");
 };
 
 startTale("Dunhollow");
 
-// Boolean Function with return.
+// Boolean Function with Conditional and return.
 var findHero = function (heroName) {
 	if (heroPresent && haveWeapons) {
 	heroStatus = " is ready!";
@@ -74,14 +74,13 @@ for (m = monsterName; m < 4; m++) {
 	console.log(heroFight + heroKill);
 };
 	return heroFight;
-	return heroKill;
 };
 
 var whatShowdown = showdown(0,0)
 
-//Procedure (Function with no return value)
+//String Procedure (Function with no return value)
 var endTale = function (villageName) {
-	console.log(hero.name + "has saved the village of " + villageName + "!" + " Our hero sheathes his weapons and begins his journey to the next town and meet up with his allies:");
+	console.log(hero.name + " has saved the village of " + villageName + "!" + " Our hero sheathes his weapons and begins his journey to the next town and meet up with his allies:");
 	
 };
 
@@ -89,7 +88,7 @@ var endTale = function (villageName) {
 endTale("Dunhollow");
 
 
-
+//JSON Data
 var handleData = function (json) {
 	for (var a = 0; a < json.allies.length; a++){
 		var ally = json.allies[a];
